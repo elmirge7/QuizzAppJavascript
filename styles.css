@@ -1,0 +1,106 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+body {
+    background-color: #00bb77;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23000' fill-opacity='.1' points='120 0 120 60 90 30 60 0 0 0 0 0 60 60 0 120 60 120 90 90 120 60 120 0'/%3E%3C/svg%3E");
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+div.quiz-container {
+    background-color: #F7F7F7;
+    position: relative;
+    width: 600px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 1em;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.quiz-container > .quiz-header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 20%;
+}
+
+.quiz-container > .quiz-header > h2 {
+    width: 90%;
+    color: #393E46;
+}
+
+.quiz-container > .quiz-header > .timer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    border: 1px solid #393E46;
+    border-radius: 100px;
+    padding: 1em;
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-container > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 60%;
+}
+
+.quiz-container > ul > li {
+    padding-bottom: 1em;
+}
+
+.quiz-container > ul > li > label {
+    cursor: pointer;
+}
+
+.quiz-container > .quiz-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    position: relative;
+}
+
+.quiz-container > .quiz-bottom > button {
+    background-color: #6D9886;
+    color: #F7F7F7;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.quiz-container > .quiz-bottom > button:hover {
+    background-color: #4D7768;
+    transition-duration: 0.5s;
+}
+
+.quiz-container > span {
+    position: absolute;
+    left: 25px;
+    color: #393E46;
+    font-size: 12px;
+}
