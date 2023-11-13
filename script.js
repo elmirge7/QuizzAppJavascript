@@ -1,42 +1,42 @@
 const quizzData = [
     {
-        question: 'qui a crée node js ?',
-        a: 'apagnan',
-        b: 'quoicoubeh',
-        c: 'apagné',
-        d: 'johan bitardo',
-        correct: 'd'
-    },
-    {
-        question: 'quel pokemon est de type feu ?',
-        a: 'pikachu',
-        b: 'qulbutoké',
-        c: 'dracaufeu',
-        d: 'noam joly girods',
+        question: 'Qui bosse le plus dans la SAE',
+        a: 'Thomas la tomate',
+        b: 'Sefadidas',
+        c: 'Noam Joly-Gyrophare',
+        d: 'Robapagnan',
         correct: 'c'
     },
     {
-        question: 'Elvir est il gentil ?',
-        a: 'oui',
-        b: 'non',
-        c: 'peut etre',
-        d: 'a toi de dire la question',
-        correct: 'd'
+        question: 'Quel sujet va faire notre groupe de SAE ?',
+        a: '1',
+        b: '2',
+        c: 'les 2',
+        d: 'aucun',
+        correct: 'c'
     },
     {
-        question: 'quel est le meilleur jeu du monde ?',
-        a: 'war thunder',
+        question: 'Qu\'est ce qu\'un burn-up ?',
+        a: 'Je ne sais pas',
+        b: 'Un graphique pour estimer la date de fin',
+        c: 'Un graphique pour estimer la date de début',
+        d: 'Il faut demander à Fabrice Ambert',
+        correct: 'b'
+    },
+    {
+        question: 'Quel est le meilleur jeu du monde ?',
+        a: 'LABABAJE',
         b: 'super smash bros ultimate',
-        c: 'hearts of iron IV',
+        c: 'FIFA',
         d: 'fortniti',
         correct: 'b'
     },
     {
         question: 'qui ?',
         a: 'kirikou',
-        b: 'quiqui et grominet',
-        c: 'quick attack',
-        d: 'lababaje',
+        b: 'johan lançon',
+        c: 'bikuta-san',
+        d: 'lle',
         correct: 'a'
     }
 
@@ -51,38 +51,38 @@ const d_text = document.getElementById("d_text"); // Représente mon quatrième 
 const submitButton = document.getElementById('submit'); // Récupération du bouton
 const quizzContainerElement = document.getElementById("quiz"); // récupération du container complet de quiz
 const numberQuestionElement = document.getElementById("number");// Récupération de l'endroit avec les questions et les questions restantes
-const timerElement = document.getElementById("timer");
+// const timerElement = document.getElementById("timer");
 
 let currentQuizz = 0; // Numéro de la question
 let answer = undefined;
 let score = 0; // suivi du score
-let timer = 10;
+// let timer = 10;
 
 loadQuizz(); //Appel de la fonction
 
 // Fonction qui gère le timer
-function timerQuizz() {
-    let timerInterval; // Déclaration de l'intervalle
-    timerElement.innerText = timer; // Modification du HTML
-    if (timer === 0) { // Si le timer atteint 0
-        clearInterval(timerInterval); // Arrête l'intervalle lorsque le timer atteint 0
-        currentQuizz++;
-        resetTimer();
-        if(currentQuizz < quizzData.length) { // On vérifie si il reste encore des questions ou non
-            loadQuizz(); // et on rappelle à chaque fois le loadQuizz pour afficher les questions de l'objet suivant
-        } else {
-            quizzContainerElement.innerHTML = `<h2> Tu as répondu correctement à ${score} / ${quizzData.length} questions ! </h2> <button onclick="location.reload()">Reload</button>`
-        }
-    } else {
-        timer--;
-    }
-}
+// function timerQuizz() {
+//     let timerInterval; // Déclaration de l'intervalle
+//     timerElement.innerText = timer; // Modification du HTML
+//     if (timer === 0) { // Si le timer atteint 0
+//         clearInterval(timerInterval); // Arrête l'intervalle lorsque le timer atteint 0
+//         currentQuizz++;
+//         resetTimer();
+//         if(currentQuizz < quizzData.length) { // On vérifie si il reste encore des questions ou non
+//             loadQuizz(); // et on rappelle à chaque fois le loadQuizz pour afficher les questions de l'objet suivant
+//         } else {
+//             quizzContainerElement.innerHTML = `<h2> Tu as répondu correctement à ${score} / ${quizzData.length} questions ! </h2> <button onclick="location.reload()">Reload</button>`
+//         }
+//     } else {
+//         timer--;
+//     }
+// }
 
-function resetTimer() {
-    timer = 10;
-}
+// function resetTimer() {
+//     timer = 10;
+// }
 
-timerInterval = setInterval(timerQuizz, 1000);
+// timerInterval = setInterval(timerQuizz, 1000);
 
 // fonction qui récupère le numéro de question
 function getNumberQuestion() {
