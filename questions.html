@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz Node.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="area">
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">La question</h2>
+            <div class="timer" id="timer">10</div>
+        </div>
+        <ul>
+            <li>
+                <input type="radio" id="a" name="answer" class="answer">
+                <label for="a" id="a_text">Réponse a</label>
+            </li>
+            <li>
+                <input type="radio" id="b" name="answer" class="answer">
+                <label for="b" id="b_text">Réponse b</label>
+            </li>
+            <li>
+                <input type="radio" id="c" name="answer" class="answer">
+                <label for="c" id="c_text">Réponse c</label>
+            </li>
+            <li>
+                <input type="radio" id="d" name="answer" class="answer">
+                <label for="d" id="d_text">Réponse d</label>
+            </li>
+        </ul>
+        <div class="quiz-bottom">
+            <button id="submit">Répondre</button>
+        </div>
+        <span id="number">1/10</span>
+    </div>
+     <script src="script.js"></script><!-- Script à la fin ou onload de la page pour que tout fonctionne correctement il faut mettre le script avant les id de question et des réponses -->
+    </body>
+</html>

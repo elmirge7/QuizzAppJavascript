@@ -6,35 +6,31 @@
     <title>Quizz Node.js</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="quiz-container" id="quiz">
-        <div class="quiz-header">
-            <h2 id="question">La question</h2>
-            <div class="timer" id="timer">10</div>
-        </div>
-        <ul>
-            <li>
-                <input type="radio" id="a" name="answer" class="answer">
-                <label for="a" id="a_text">Réponse a</label>
-            </li>
-            <li>
-                <input type="radio" id="b" name="answer" class="answer">
-                <label for="b" id="b_text">Réponse b</label>
-            </li>
-            <li>
-                <input type="radio" id="c" name="answer" class="answer">
-                <label for="c" id="c_text">Réponse c</label>
-            </li>
-            <li>
-                <input type="radio" id="d" name="answer" class="answer">
-                <label for="d" id="d_text">Réponse d</label>
-            </li>
+<body class="area">
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
         </ul>
-        <div class="quiz-bottom">
-            <button id="submit">Répondre</button>
-        </div>
-        <span id="number">1/10</span>
+
+    <div class="intro-container">
+        <h1>Quizz Node.js</h1>
+        <p>Bienvenue dans ce quiz qui vous permettra de tester vos connaissances en Node.js</p>
+        <button id="start-button">Commencer le quizz</button>
     </div>
-     <script src="script.js"></script><!-- Script à la fin ou onload de la page pour que tout fonctionne correctement il faut mettre le script avant les id de question et des réponses -->
-</body>
+     <script>
+        const startButton = document.getElementById("start-button");
+
+        startButton.addEventListener('click', () => {
+            location.href = "http://127.0.0.1:5500/questions.html";
+        })
+     </script><!-- Script à la fin ou onload de la page pour que tout fonctionne correctement il faut mettre le script avant les id de question et des réponses -->
+    </body>
 </html>
